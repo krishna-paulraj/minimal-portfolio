@@ -22,7 +22,7 @@ const HighlightedHeading = ({ children, className }: Props) => {
         <div className="absolute -bottom-px -right-px h-1 w-1 animate-pulse rounded-full bg-neutral-200"></div>
       </div>
       <span
-        className="inline-block text-sm"
+        className="inline-block text-base"
         style={{ opacity: 1, filter: "blur(0px)", transform: "none" }}
       >
         {children}

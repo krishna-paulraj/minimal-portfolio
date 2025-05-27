@@ -2,7 +2,7 @@ import HighlightedHeading from "./HighlightedHeading";
 
 const Contact = () => {
   return (
-    <div className="mt-5 border-t pt-5">
+    <div className="my-5 border-t py-5">
       <HighlightedHeading className="my-4">Get in touch</HighlightedHeading>
       <p className="max-w-md text-xs text-gray-500">
         I&apos;m currently looking for new opportunities. Whether you have a

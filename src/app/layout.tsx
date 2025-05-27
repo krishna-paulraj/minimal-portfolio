@@ -13,6 +13,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Suresh Krishna",
   description: "My Portfolio",
+  icons: {
+    icon: "/favicon.jpeg",
+  },
 };
 
 export default function RootLayout({
@@ -22,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} scroll-smooth antialiased`}>
         <Container>
           <Navbar />
           {children}

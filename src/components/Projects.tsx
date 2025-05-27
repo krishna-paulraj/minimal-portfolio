@@ -58,10 +58,12 @@ const Projects = () => {
         {projects.map((item, idx) => (
           <div
             key={idx}
-            className="min-h-60 transform cursor-pointer rounded-md border p-3 shadow-sm transition-all duration-200 ease-in-out hover:scale-[1.01] hover:shadow-lg"
+            className="relative min-h-60 transform cursor-pointer rounded-md border p-3 shadow-sm transition-all duration-200 ease-in-out hover:scale-[1.01] hover:shadow-lg"
           >
+            <div className="absolute inset-x-10 -bottom-px z-30 h-px w-[50%] bg-gradient-to-r from-transparent via-emerald-500 to-transparent" />
+            <div className="absolute -bottom-px left-10 z-30 h-px w-[50%] bg-gradient-to-r from-transparent via-sky-500 to-transparent" />
             <p className="font-bold tracking-tighter">{item.name}</p>
-            <p className="mt-2 text-xs text-gray-500">{item.description}</p>
+            <p className="mt-2 text-sm text-gray-500">{item.description}</p>
             <div className="mt-3 flex flex-wrap">
               {item.tech.map((tech, idx) => (
                 <p
