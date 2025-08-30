@@ -61,7 +61,7 @@ export function ContainerTextFlip({
       transition={{ duration: animationDuration / 2000 }}
       className={cn(
         "relative inline-block rounded-lg text-center text-sm font-semibold text-gray-600 dark:text-white md:text-sm",
-        "shadow-[inset_0_-1px_#d1d5db,inset_0_0_0_1px_#d1d5db,_0_4px_8px_#d1d5db]",
+        "border border-gray-200",
         "dark:[background:linear-gradient(to_bottom,#374151,#1f2937)]",
         "dark:shadow-[inset_0_-1px_#10171e,inset_0_0_0_1px_hsla(205,89%,46%,.24),_0_4px_8px_#00000052]",
         className,
