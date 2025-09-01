@@ -40,6 +40,10 @@ export default {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
 				},
+				info: {
+					DEFAULT: 'hsl(var(--info))',
+					foreground: 'hsl(var(--info-foreground))'
+				},
 
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -58,8 +62,22 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
-			}
+			},
+			keyframes: {
+				"collapsible-down": {
+					from: { height: "0" },
+					to: { height: "var(--radix-collapsible-content-height)" },
+				},
+				"collapsible-up": {
+					from: { height: "var(--radix-collapsible-content-height)" },
+					to: { height: "0" },
+				},
+			},
+			animation: {
+				"collapsible-down": "collapsible-down 0.2s ease-out",
+				"collapsible-up": "collapsible-up 0.2s ease-out",
+			},
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;

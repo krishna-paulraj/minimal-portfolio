@@ -1,8 +1,7 @@
-import type { ExperienceItemType } from "@/components/work-experience";
-import { WorkExperience } from "@/components/work-experience";
-import HighlightedHeading from "./HighlightedHeading";
+import type { ExperienceItemType } from "./work-experience";
+import { WorkExperience } from "./work-experience";
+import HighlightedHeading from "../HighlightedHeading";
 import blocsys from "@/assets/blocsys-logo.png";
-
 
 const WORK_EXPERIENCE: ExperienceItemType[] = [
     {
@@ -27,11 +26,24 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
                 icon: "code",
                 skills: ["Javascript", "React.js", "Next.js", "Docker"],
                 isExpanded: true,
+
+            },
+            {
+                id: "1-2",
+                title: "Software Developer Intern",
+                employmentPeriod: "Jun 2025 - Jul 2025",
+                employmentType: "Full-time",
+                description: `- Develop [AI Chat](https://help.simplamo.com/features/simplamo-ai/ai-chat/guide_simplamo_ai_chat?ref=IN-926722) and [AI Assistant](https://help.simplamo.com/features/simplamo-ai/ai-expert/aiexpert-rockdiscribe?ref=IN-926722) features.
+- Develop and maintain core features to enhance functionality and user experience.
+- Ensure UI/UX consistency and adherence to standards.`,
+                icon: "design",
+                skills: ["Javascript", "React.js", "Next.js", "Docker"],
+                isExpanded: false,
             },
         ],
     },
-];
 
+];
 
 const WorkExperienceComponent = () => {
     return (
@@ -45,4 +57,4 @@ const WorkExperienceComponent = () => {
     );
 };
 
-export default WorkExperienceComponent;
+export { WorkExperienceComponent as default };

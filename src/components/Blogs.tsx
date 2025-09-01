@@ -10,18 +10,14 @@ const Blogs = () => {
         What I&apos;m writing lately
       </HighlightedHeading>
       <div className="grid grid-cols-1 gap-4">
-        <div className="relative col-span-1 flex h-10 min-h-20 cursor-pointer flex-col justify-between gap-2 rounded-md border p-3 shadow-sm transition-all duration-200 ease-in-out hover:scale-[1.01] hover:shadow-md md:flex-row md:items-center">
-          <div className="absolute inset-x-10 -bottom-px z-30 h-px w-[50%] bg-gradient-to-r from-transparent via-emerald-500 to-transparent" />
-          <div className="absolute -bottom-px left-10 z-30 h-px w-[50%] bg-gradient-to-r from-transparent via-sky-500 to-transparent" />
-          <p className="font-bold tracking-tight">
+        <div className="group/blog relative col-span-1 flex h-10 min-h-20 cursor-pointer flex-col justify-between gap-2 rounded-md border p-3 md:flex-row md:items-center">
+          <p className="font-bold tracking-tight underline-offset-4 group-hover/blog:underline">
             Essential Sections Every Developer Portfolio Should Have
           </p>
           <p className="text-sm text-gray-500">1291 views</p>
         </div>
-        <div className="relative col-span-1 flex h-10 min-h-20 cursor-pointer flex-col justify-between gap-2 rounded-md border p-3 shadow-sm transition-all duration-200 ease-in-out hover:scale-[1.01] hover:shadow-md md:flex-row md:items-center">
-          <div className="absolute inset-x-10 -bottom-px z-30 h-px w-[50%] bg-gradient-to-r from-transparent via-emerald-500 to-transparent" />
-          <div className="absolute -bottom-px left-10 z-30 h-px w-[50%] bg-gradient-to-r from-transparent via-sky-500 to-transparent" />
-          <p className="font-bold tracking-tight">
+        <div className="group/blog relative col-span-1 flex h-10 min-h-20 cursor-pointer flex-col justify-between gap-2 rounded-md border p-3 md:flex-row md:items-center">
+          <p className="font-bold tracking-tight underline-offset-4 group-hover/blog:underline">
             Ace the Javascript Interview
           </p>
           <p className="text-sm text-gray-500">720 views</p>

@@ -4,7 +4,6 @@ import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useState } from "react";
 import Image from "next/image";
 import { ChevronRightIcon } from "lucide-react";
-import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const navItems = [

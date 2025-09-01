@@ -23,6 +23,29 @@ export function Markdown(props: React.ComponentProps<typeof ReactMarkdown>) {
                     },
                 ],
             ]}
+            components={{
+                ul: ({ children, ...props }) => (
+                    <ul className="list-disc pl-4 space-y-1" {...props}>
+                        {children}
+                    </ul>
+                ),
+                li: ({ children, ...props }) => (
+                    <li className="text-gray-600 dark:text-gray-400" {...props}>
+                        {children}
+                    </li>
+                ),
+                a: ({ children, href, ...props }) => (
+                    <a
+                        href={href}
+                        className="text-blue-600 dark:text-blue-400 hover:underline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        {...props}
+                    >
+                        {children}
+                    </a>
+                ),
+            }}
             {...props}
         />
     );

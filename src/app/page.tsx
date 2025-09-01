@@ -5,7 +5,8 @@ import Socials from "@/components/Socials";
 import Contact from "@/components/Contact";
 import Blogs from "@/components/Blogs";
 import { motion } from "framer-motion";
-import WorkExperience from "@/components/WorkExperience";
+import WorkExperienceComponent from "@/components/work-experience";
+import EducationComponent from "@/components/education";
 import { SocialLinks } from "@/components/social-links";
 
 export default function Home() {
@@ -22,7 +23,8 @@ export default function Home() {
       </div>
       <Projects />
       <Blogs />
-      <WorkExperience />
+      <WorkExperienceComponent />
+      <EducationComponent />
       <Contact />
     </motion.div>
   );

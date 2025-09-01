@@ -13,7 +13,7 @@ const Hero = () => {
           />
         </div>
       </div>
-      <p className="mt-3 text-lg text-gray-400">
+      <p className="mt-3 text-md text-slate-500">
         A passionate web developer crafting sleek <br /> and efficient digital
         experiences.
       </p>

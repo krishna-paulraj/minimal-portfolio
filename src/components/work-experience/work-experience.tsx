@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import { Markdown } from "./markdown";
+import { Markdown } from "@/components/markdown";
 
 import {
   Collapsible,
@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/collapsible";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
+import playClick from "@/lib/sound-manager";
 
 const iconMap = {
   code: CodeXmlIcon,
@@ -119,7 +120,7 @@ export function ExperienceItem({
         )}
       </div>
 
-      <div className="relative space-y-4 before:absolute before:left-3 before:h-full before:w-px before:bg-border">
+      <div className="relative space-y-4 before:absolute before:left-3 before:h-full before:w-px before:bg-slate-200">
         {experience.positions.map((position) => (
           <ExperiencePositionItem key={position.id} position={position} />
         ))}
@@ -137,7 +138,7 @@ export function ExperiencePositionItem({
   return (
     <Collapsible defaultOpen={position.isExpanded} asChild>
       <div className="relative last:before:absolute last:before:h-full last:before:w-4 last:before:bg-background">
-        <CollapsibleTrigger className="group/experience not-prose block w-full text-left select-none">
+        <CollapsibleTrigger onClick={() => playClick.playClick()} className="group/experience not-prose block w-full text-left select-none">
           <div className="relative z-1 mb-1 flex items-center gap-3 bg-background">
             <div
               className="flex size-6 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground"
@@ -181,10 +182,12 @@ export function ExperiencePositionItem({
           </div>
         </CollapsibleTrigger>
 
-        <CollapsibleContent className="overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
+        <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
           {position.description && (
-            <div className="pt-2 pl-9 text-gray-500 text-sm leading-relaxed">
-              <Markdown>{position.description}</Markdown>
+            <div className="pt-2 pl-9">
+              <Prose className="text-sm text-gray-600 dark:text-gray-400">
+                <Markdown>{position.description}</Markdown>
+              </Prose>
             </div>
           )}
 
@@ -210,6 +213,8 @@ function Prose({ className, ...props }: React.ComponentProps<"div">) {
         "prose prose-sm max-w-none text-muted-foreground prose-zinc dark:prose-invert",
         "prose-a:font-medium prose-a:break-words prose-a:text-foreground prose-a:underline prose-a:underline-offset-4",
         "prose-code:rounded-md prose-code:border prose-code:bg-muted/50 prose-code:px-[0.3rem] prose-code:py-[0.2rem] prose-code:text-sm prose-code:font-normal prose-code:before:content-none prose-code:after:content-none",
+        "prose-ul:my-0 prose-li:my-0 prose-p:my-0",
+        "prose-ul:list-disc prose-ul:pl-4",
         className
       )}
       {...props}
