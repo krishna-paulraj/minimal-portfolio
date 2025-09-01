@@ -2,7 +2,7 @@ import HighlightedHeading from "./HighlightedHeading";
 
 const Contact = () => {
   return (
-    <div className="my-5 border-t py-5 flex flex-col items-center justify-center">
+    <div id="contact" className="my-5 border-t py-5 flex flex-col items-center justify-center">
       <HighlightedHeading className="my-4">Get in touch</HighlightedHeading>
       <p className="max-w-md text-sm text-gray-500 text-center">
         I&apos;m currently looking for new opportunities. Whether you have a

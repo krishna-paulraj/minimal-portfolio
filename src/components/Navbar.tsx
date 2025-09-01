@@ -7,10 +7,7 @@ import { ChevronRightIcon } from "lucide-react";
 
 const Navbar = () => {
   const navItems = [
-    {
-      title: "About",
-      href: "about",
-    },
+
     {
       title: "Blogs",
       href: "blogs",
@@ -21,7 +18,7 @@ const Navbar = () => {
     },
     {
       title: "Contact",
-      href: "contact",
+      href: "/#contact",
     },
   ];
 
@@ -36,6 +33,16 @@ const Navbar = () => {
       setScrolled(false);
     }
   });
+
+  const scrollToContact = () => {
+    const element = document.querySelector('#contact');
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
 
   return (
     <motion.nav
@@ -68,21 +75,39 @@ const Navbar = () => {
       </Link>
       <div className="flex items-center">
         {navItems.map((item, idx) => (
-          <Link
-            className="relative px-2 py-1 text-sm"
-            href={item.href}
-            key={idx}
-            onMouseEnter={() => setHovered(idx)}
-            onMouseLeave={() => setHovered(null)}
-          >
-            {howered === idx && (
-              <motion.span
-                layoutId="howered-span"
-                className="absolute inset-0 h-full w-full rounded-md bg-neutral-100"
-              ></motion.span>
-            )}
-            <span className="relative z-10">{item.title}</span>
-          </Link>
+          item.href.startsWith('#') ? (
+            <button
+              className="relative px-2 py-1 text-sm"
+              onClick={scrollToContact}
+              key={idx}
+              onMouseEnter={() => setHovered(idx)}
+              onMouseLeave={() => setHovered(null)}
+            >
+              {howered === idx && (
+                <motion.span
+                  layoutId="howered-span"
+                  className="absolute inset-0 h-full w-full rounded-md bg-neutral-100"
+                ></motion.span>
+              )}
+              <span className="relative z-10">{item.title}</span>
+            </button>
+          ) : (
+            <Link
+              className="relative px-2 py-1 text-sm"
+              href={item.href}
+              key={idx}
+              onMouseEnter={() => setHovered(idx)}
+              onMouseLeave={() => setHovered(null)}
+            >
+              {howered === idx && (
+                <motion.span
+                  layoutId="howered-span"
+                  className="absolute inset-0 h-full w-full rounded-md bg-neutral-100"
+                ></motion.span>
+              )}
+              <span className="relative z-10">{item.title}</span>
+            </Link>
+          )
         ))}
         <Link
           target="_blank"

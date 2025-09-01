@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  images: {
+    domains: ["assets.chanhdai.com"],
+  },
 };
 
 export default nextConfig;
