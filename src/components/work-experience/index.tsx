@@ -15,16 +15,13 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
                 title: "Software Engineer",
                 employmentPeriod: "Jun 2025 - Present",
                 employmentType: "Full-time",
-                description: `- Develop [AI Chat](https://help.simplamo.com/features/simplamo-ai/ai-chat/guide_simplamo_ai_chat?ref=IN-926722) and [AI Assistant](https://help.simplamo.com/features/simplamo-ai/ai-expert/aiexpert-rockdiscribe?ref=IN-926722) features.
-- Develop [Whiteboards](https://help.simplamo.com/features/whiteboard/overview?ref=IN-926722) with real-time collaboration.
-- Build and maintain the [Zalo Mini App](https://zalo.me/s/1736112917405511258/) for Simplamo with seamless integration.
-- Develop interactive chart and analytics widgets for the [Dashboard](https://help.simplamo.com/features/dashboard/overview) to enhance data visualization.
-- Develop and maintain core features to enhance functionality and user experience.
-- Ensure UI/UX consistency and adherence to standards.
-- Implement robust frontend solutions for web and mobile platforms.
-- Analyze technical capabilitis and provide optimal solutions.`,
+                description: `
+- Build and optimize core features to improve functionality and user experience.
+- Maintain design consistency and ensure adherence to UI/UX best practices.
+- Implement scalable and robust frontend solutions for both web and mobile platforms.
+- Conduct technical analysis to identify and deliver optimal solutions.`,
                 icon: "code",
-                skills: ["Javascript", "React.js", "Next.js", "Docker"],
+                skills: ["Typescript", "React.js", "Next.js"],
                 isExpanded: true,
 
             },
@@ -33,11 +30,13 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
                 title: "Software Developer Intern",
                 employmentPeriod: "Jun 2025 - Jul 2025",
                 employmentType: "Full-time",
-                description: `- Develop [AI Chat](https://help.simplamo.com/features/simplamo-ai/ai-chat/guide_simplamo_ai_chat?ref=IN-926722) and [AI Assistant](https://help.simplamo.com/features/simplamo-ai/ai-expert/aiexpert-rockdiscribe?ref=IN-926722) features.
+                description: `
 - Develop and maintain core features to enhance functionality and user experience.
-- Ensure UI/UX consistency and adherence to standards.`,
+- Ensure UI/UX consistency and adherence to standards.
+- Implement robust frontend solutions for web and mobile platforms.
+- Analyze technical capabilitis and provide optimal solutions.`,
                 icon: "design",
-                skills: ["Javascript", "React.js", "Next.js", "Docker"],
+                skills: ["Javascript", "React.js", "Next.js"],
                 isExpanded: false,
             },
         ],

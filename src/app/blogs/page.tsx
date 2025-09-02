@@ -38,7 +38,7 @@ const BlogsPage = () => {
             <h1 className="text-5xl font-extrabold tracking-tighter">
                 Blogs
             </h1>
-            <p className="mt-3 text-md text-slate-500">
+            <p className="mt-3 text-md text-slate-500 leading-none">
                 A collection of articles on development, design, and ideas.
                 <br />
                 I share my learnings, ideas, and experiences here.
