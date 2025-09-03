@@ -32,20 +32,20 @@ const Hero = () => {
 
       <div className="py-5 border-t border-gray-200 text-md text-slate-600 font-medium flex flex-col gap-2">
         <div className="flex items-center gap-3">
-          <Code className="size-4" />
+          <Code className="size-4 text-black" />
           <div className="flex">
             <p>Software Engineer</p>
             <a href="https://blocsys.com" target="_blank" rel="noopener noreferrer" className="text-black underline underline-offset-4 ml-2">@Blocsys</a>
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <MapPinIcon className="size-4" /> Pune City, Maharashtra, India
+          <MapPinIcon className="size-4 text-black" /> Pune City, Maharashtra, India
         </div>
         <div className="flex items-center gap-3">
-          <PhoneCallIcon className="size-4" /> +91 7276061175
+          <PhoneCallIcon className="size-4 text-black" /> +91 7276061175
         </div>
         <div className="flex items-center gap-3">
-          <MailIcon className="size-4" /> krishnapaulraj2004@gmail.com
+          <MailIcon className="size-4 text-black" /> krishnapaulraj2004@gmail.com
         </div>
       </div>
 
