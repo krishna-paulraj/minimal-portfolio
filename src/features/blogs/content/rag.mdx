@@ -1,0 +1,41 @@
+---
+title: A Deep Dive into Building a Production-Level RAG System
+description: Learn how to build a Retrieval Augmented Generation (RAG) system from scratch to combat LLM hallucinations and provide accurate, context-aware answers.
+image: https://i.ytimg.com/vi/4Ax77tnW0e8/maxresdefault.jpg
+new: true
+createdAt: 2025-09-07
+updatedAt: 2025-09-07
+---
+
+This video provides a comprehensive guide to understanding and building a production-level Retrieval Augmented Generation (RAG) system. Watch the full video below:
+
+<iframe
+  className="aspect-video w-full rounded-lg"
+  src="https://www.youtube.com/embed/4Ax77tnW0e8"
+  title="Building a Production-Level RAG System"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerPolicy="strict-origin-when-cross-origin"
+  allowFullScreen
+/>
+
+> Source: https://www.youtube.com/watch?v=4Ax77tnW0e8
+
+This video tackles the common problem of "hallucinations" in Large Language Models (LLMs) and presents RAG as a powerful solution. Instead of costly fine-tuning, RAG provides LLMs with the right context at the right time.
+
+### Key Concepts Covered:
+
+* **Understanding RAG:** The video explains how RAG enhances LLM responses by retrieving relevant information from a knowledge base, ensuring answers are accurate and grounded in data.
+* **Two-Phase Architecture:** It details the two main phases of a RAG system: the one-time **Indexing Phase** for processing and storing documents, and the real-time **Query Phase** for answering user questions.
+* **Indexing Deep Dive:** Learn about the crucial steps of document loading, chunking text for better retrieval, creating vector embeddings, and storing them in a vector database.
+* **Querying with Context:** The video demonstrates how to handle user queries, including follow-up questions, by transforming and embedding the query to find the most relevant information to augment the LLM's prompt.
+* **Preventing Hallucinations:** A key takeaway is how to instruct the LLM to answer *only* based on the provided context, and to state when an answer cannot be found.
+
+### Technologies Used:
+
+The project in the video utilizes a modern stack for building RAG applications:
+
+* **LangChain.js:** For simplifying the development process.
+* **Pinecone:** As the vector database for efficient semantic search.
+* **Google Generative AI (Gemini):** For both embedding and generation tasks.
+
+This video is a must-watch for anyone looking to build more reliable and accurate applications with Large Language Models.

@@ -123,7 +123,7 @@ const Navbar = () => {
         <Link
           target="_blank"
           className="group relative ml-2 inline-block cursor-pointer rounded-full bg-slate-900 p-px text-xs font-semibold leading-6 text-white no-underline shadow-sm shadow-zinc-900"
-          href="https://drive.google.com/file/d/1dwAWPkNhnmnSIxYgTEuyoLpMwFup_oOQ/view?usp=sharing"
+          href="https://drive.google.com/file/d/1rWRv3yzc4vNh6r3YmsyMISkujB_xw7u8/view?usp=sharing"
         >
           <span className="absolute inset-0 overflow-hidden rounded-full">
             <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>

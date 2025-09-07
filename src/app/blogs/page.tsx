@@ -2,7 +2,6 @@ import MinimalCard, { MinimalCardDescription, MinimalCardImage, MinimalCardTitle
 import { getAllPosts } from "@/features/blogs/data/posts";
 import dayjs from "dayjs";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 const BlogsPage = () => {
     const allPosts = getAllPosts();
@@ -13,8 +12,9 @@ const BlogsPage = () => {
                 Blogs
             </h1>
             <p className="mt-3 text-md text-slate-500 leading-none">
-                A collection of articles on development, design, and ideas.
-                <br />
+                A collection of articles on development, design, and ideas.{" "}
+            </p>
+            <p className="mt-2 md:mt-0 text-md text-slate-500 leading-none">
                 I share my learnings, ideas, and experiences here.
             </p>
             <div className="my-5 border" />

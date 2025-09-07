@@ -21,7 +21,7 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
 - Implement scalable and robust frontend solutions for both web and mobile platforms.
 - Conduct technical analysis to identify and deliver optimal solutions.`,
                 icon: "code",
-                skills: ["Typescript", "React.js", "Next.js"],
+                skills: ["Typescript", "React.js", "Next.js", "LangChain"],
                 isExpanded: true,
 
             },
