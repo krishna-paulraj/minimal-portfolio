@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-between border-t px-1 py-2 text-xs text-gray-500">
+    <footer className="flex flex-col md:flex-row justify-between text-center border-t px-1 py-2 text-sm md:text-md text-gray-500">
       <p>Inspired By Manu Arora & Chanhdai</p>
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-wrap justify-center">
         <h1>Find me on</h1>
         <Link href={"https://leetcode.com/u/krishnapaulraj/"}>
           <Image

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { ChevronRightIcon } from "lucide-react";
 
@@ -10,11 +10,7 @@ const Navbar = () => {
 
     {
       title: "Blogs",
-      href: "blogs",
-    },
-    {
-      title: "Projects",
-      href: "projects",
+      href: "/blogs",
     },
     {
       title: "Contact",
@@ -25,8 +21,23 @@ const Navbar = () => {
   const [howered, setHovered] = useState<number | null>(null);
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
+    // Disable scroll animations on mobile
+    if (isMobile) return;
+
     if (latest > 20) {
       setScrolled(true);
     } else {
@@ -46,7 +57,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      animate={{
+      animate={isMobile ? {} : {
         backdropFilter: scrolled ? "blur(10px)" : "none",
         boxShadow: scrolled
           ? "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"
@@ -54,7 +65,7 @@ const Navbar = () => {
         width: scrolled ? "40%" : "100%",
         y: scrolled ? 20 : 0,
       }}
-      transition={{
+      transition={isMobile ? {} : {
         type: "spring",
         stiffness: 200,
         damping: 50,
@@ -80,8 +91,8 @@ const Navbar = () => {
               className="relative px-2 py-1 text-sm"
               onClick={scrollToContact}
               key={idx}
-              onMouseEnter={() => setHovered(idx)}
-              onMouseLeave={() => setHovered(null)}
+              onMouseEnter={() => !isMobile && setHovered(idx)}
+              onMouseLeave={() => !isMobile && setHovered(null)}
             >
               {howered === idx && (
                 <motion.span
@@ -96,8 +107,8 @@ const Navbar = () => {
               className="relative px-2 py-1 text-sm"
               href={item.href}
               key={idx}
-              onMouseEnter={() => setHovered(idx)}
-              onMouseLeave={() => setHovered(null)}
+              onMouseEnter={() => !isMobile && setHovered(idx)}
+              onMouseLeave={() => !isMobile && setHovered(null)}
             >
               {howered === idx && (
                 <motion.span
